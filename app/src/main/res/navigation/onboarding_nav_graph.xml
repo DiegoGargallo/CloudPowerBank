@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/onboarding_nav_graph"
+            app:startDestination="@id/onboardingFragment">
+    <fragment android:id="@+id/onboardingFragment"
+              android:name="es.diegogargallotarin.cloudpowerbank.ui.onboarding.OnboardingFragment"
+              android:label="onboarding_fragment" tools:layout="@layout/onboarding_fragment">
+        <action android:id="@+id/action_onboardingFragment_to_auth_nav_graph" app:destination="@id/auth_nav_graph"/>
+    </fragment>
+    <include app:graph="@navigation/auth_nav_graph"/>
+</navigation>

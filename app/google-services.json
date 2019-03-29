@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "62236304651",
+    "firebase_url": "https://cloudpowerbank-192c9.firebaseio.com",
+    "project_id": "cloudpowerbank-192c9",
+    "storage_bucket": "cloudpowerbank-192c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62236304651:android:2d7ebdc79f68e466",
+        "android_client_info": {
+          "package_name": "es.diegogargallotarin.cloudpowerbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62236304651-58rt02o9kakgrtieqa6rpnlfikh3n7bk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhLR4cYHndT1t8nFQ516HAjRK4kX1sIx4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

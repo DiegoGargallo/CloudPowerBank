@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">Cloud PowerBank</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="loading">loading…</string>
+
+
+    <!-- AUTH -->
+    <string name="auth_main_title">Auth section</string>
+    <string name="auth_main_login_button">Login</string>
+    <string name="auth_main_register_button">Register</string>
+
+    <string name="auth_login_title">LogIn section</string>
+    <string name="auth_login_button">Login</string>
+    <string name="auth_login_text_input_email">Email</string>
+    <string name="auth_login_text_input_password">Password</string>
+    <string name="auth_login_failed">Login failed</string>
+
+    <string name="auth_register_title">Register section</string>
+    <string name="auth_register_button">Register</string>
+    <string name="auth_register_text_input_name">Complete name</string>
+    <string name="auth_register_text_input_email">Email</string>
+    <string name="auth_register_text_input_password">Password</string>
+    <string name="auth_register_failed">Register failed</string>
+
+
 </resources>
