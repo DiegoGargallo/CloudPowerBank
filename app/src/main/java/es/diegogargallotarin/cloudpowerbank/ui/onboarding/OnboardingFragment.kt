@@ -1,5 +1,6 @@
 package es.diegogargallotarin.cloudpowerbank.ui.onboarding
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
@@ -28,6 +29,10 @@ class OnboardingFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(OnboardingViewModel::class.java)
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         Handler().postDelayed({
             startActivity(activity?.authScreenIntent())
