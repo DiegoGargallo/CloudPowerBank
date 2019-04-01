@@ -1,14 +1,19 @@
 package es.diegogargallotarin.cloudpowerbank.ui.auth
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import es.diegogargallotarin.cloudpowerbank.R
 import es.diegogargallotarin.cloudpowerbank.base.BaseActivity
 import kotlinx.android.synthetic.main.auth_activity.*
+
+
+fun Context.authScreenIntent(): Intent {
+    return Intent(this, AuthActivity::class.java)
+}
 
 class AuthActivity : BaseActivity() {
 

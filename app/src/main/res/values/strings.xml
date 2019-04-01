@@ -18,6 +18,9 @@
     <string name="loading">loading…</string>
 
 
+    <!-- ONBOARDING -->
+    <string name="onboarding_main_title">Onboarding section</string>
+
     <!-- AUTH -->
     <string name="auth_main_title">Auth section</string>
     <string name="auth_main_login_button">Login</string>

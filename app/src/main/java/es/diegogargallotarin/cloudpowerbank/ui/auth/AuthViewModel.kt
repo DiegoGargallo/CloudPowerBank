@@ -1,13 +1,14 @@
 package es.diegogargallotarin.cloudpowerbank.ui.auth
 
-import android.text.TextUtils
-import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.firebase.auth.FirebaseAuth
-import es.diegogargallotarin.cloudpowerbank.R
+import es.diegogargallotarin.cloudpowerbank.models.User
 
 class AuthViewModel : ViewModel() {
+    val user = MutableLiveData<User>()
 
+    init {
+        // Here you could use the ID to get the user info from the DB or remote server
+        user.value = User()
+    }
 }

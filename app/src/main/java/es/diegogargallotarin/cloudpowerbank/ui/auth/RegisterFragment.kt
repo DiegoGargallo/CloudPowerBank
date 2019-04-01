@@ -1,18 +1,19 @@
 package es.diegogargallotarin.cloudpowerbank.ui.auth
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import es.diegogargallotarin.cloudpowerbank.R
-import es.diegogargallotarin.cloudpowerbank.ui.main.MainScreenIntent
+import es.diegogargallotarin.cloudpowerbank.models.User
+import es.diegogargallotarin.cloudpowerbank.ui.main.mainScreenIntent
 import kotlinx.android.synthetic.main.auth_register_fragment.*
 
 class RegisterFragment : Fragment() {
@@ -58,7 +59,10 @@ class RegisterFragment : Fragment() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
                     val user = auth.currentUser
-                    user?.let { goToMainScreen(it) }
+                    user?.let {
+                        viewModel.user.value = User(it.uid, it.displayName!!, user.displayName!!, user.email!!)
+                        goToMainScreen(viewModel.user.value!!)
+                    }
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -101,8 +105,8 @@ class RegisterFragment : Fragment() {
         return valid
     }
 
-    private fun goToMainScreen(user: FirebaseUser) {
-        startActivity(activity?.MainScreenIntent(user))
+    private fun goToMainScreen(user: User) {
+        startActivity(activity?.mainScreenIntent(user))
     }
 
 }

@@ -6,9 +6,10 @@ import android.os.Bundle
 import com.google.firebase.auth.FirebaseUser
 import es.diegogargallotarin.cloudpowerbank.R
 import es.diegogargallotarin.cloudpowerbank.base.BaseActivity
+import es.diegogargallotarin.cloudpowerbank.models.User
 
 
-fun Context.MainScreenIntent(user: FirebaseUser): Intent {
+fun Context.mainScreenIntent(user: User): Intent {
     val intent = Intent(this, MainActivity::class.java)
     intent.putExtra("USER", user)
     return intent

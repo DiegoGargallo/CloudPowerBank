@@ -1,12 +1,14 @@
 package es.diegogargallotarin.cloudpowerbank.ui.onboarding
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import es.diegogargallotarin.cloudpowerbank.R
+import es.diegogargallotarin.cloudpowerbank.ui.auth.authScreenIntent
 
 class OnboardingFragment : Fragment() {
 
@@ -26,7 +28,10 @@ class OnboardingFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(OnboardingViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        Handler().postDelayed({
+            startActivity(activity?.authScreenIntent())
+        }, 2000)
     }
 
 }
